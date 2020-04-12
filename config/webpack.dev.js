@@ -27,6 +27,23 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].html",
+            },
+          },
+          {
+            loader: "extract-loader", // Tách ra 1 file html riêng, ko để trong main-bundle.js
+          },
+          {
+            loader: "html-loader", // linting
+          },
+        ],
+      },
     ],
   },
 };
