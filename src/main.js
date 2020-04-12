@@ -1,1 +1,1 @@
-alert("Hello Hào");
+require("./main.css");
