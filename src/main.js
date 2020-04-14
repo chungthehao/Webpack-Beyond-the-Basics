@@ -1,6 +1,7 @@
 require("core-js");
 // require("regenerator-runtime/runtime"); // 859 KiB
 // require("@babel/runtime/regenerator"); // 835 KiB
+require("webpack-hot-middleware/client"); // Setup the web socket connection
 
 require("./main.css");
 require("./index.html"); // Sau đó compile ra 1 file riêng (cấu hình ở webpack.dev.js)
