@@ -1,7 +1,7 @@
 require("core-js");
 // require("regenerator-runtime/runtime"); // 859 KiB
 // require("@babel/runtime/regenerator"); // 835 KiB
-require("webpack-hot-middleware/client"); // Setup the web socket connection
+require("webpack-hot-middleware/client?reload=true"); // Setup the web socket connection
 
 require("./main.css");
 require("./index.html"); // Sau đó compile ra 1 file riêng (cấu hình ở webpack.dev.js)
@@ -21,6 +21,6 @@ const myFunc = async (args) => {
   //   const { a, b } = args;
 
   await console.log("Hi from the future!" /*, a, b*/);
-  console.log("Done!");
+  console.log("I'm Done!");
 };
 myFunc({ a: 111, b: 222 });
